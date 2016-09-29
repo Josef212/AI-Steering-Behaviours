@@ -18,7 +18,12 @@ public class SteeringSeek : MonoBehaviour {
 
 	public void Steer(Vector3 target)
 	{
-		// TODO 1: accelerate towards our target at max_acceleration
-		// use move.AccelerateMovement()
+        // TODO 1: accelerate towards our target at max_acceleration
+        // use move.AccelerateMovement()
+        Vector3 dif = target - transform.position;
+        dif.Normalize();
+        dif *= move.max_mov_acceleration;
+
+        move.AccelerateMovement(dif);
 	}
 }
