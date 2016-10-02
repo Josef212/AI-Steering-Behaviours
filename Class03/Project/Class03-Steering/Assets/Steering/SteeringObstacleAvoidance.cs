@@ -3,9 +3,16 @@ using System.Collections;
 
 public class SteeringObstacleAvoidance : MonoBehaviour {
 
+    [System.Serializable]
+    class Ray : System.Object
+    {
+        public Vector3 offSet;
+        public Vector3 direction;
+        public float range;
+    }
+
 	public LayerMask mask;
 	public float avoid_distance = 5.0f;
-
 
 	Move move;
 	SteeringSeek seek;
