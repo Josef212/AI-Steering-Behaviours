@@ -17,10 +17,20 @@ public class SteeringSeparation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+<<<<<<< HEAD
 		// TODO 1: Agents much separate from each other:
 		// 1- Find other agents in the vicinity (use a layer for all agents)
 		// 2- For each of them calculate a escape vector using the AnimationCurve
 		// 3- Sum up all vectors and trim down to maximum acceleration
+=======
+        // TODO 1: Agents much separate from each other:
+        // 1- Find other agents in the vicinity (use a layer for all agents)
+        // 2- For each of them calculate a escape vector using the AnimationCurve
+        // 3- Sum up all vectors and trim down to maximum acceleration
+        Collider[] cols = Physics.OverlapSphere(transform.position, search_radius, mask);
+
+        foreach()
+>>>>>>> origin/master
 	}
 
 	void OnDrawGizmosSelected() 
